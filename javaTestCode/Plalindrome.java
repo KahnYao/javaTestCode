@@ -44,8 +44,8 @@ public class Plalindrome {
                 }
                 if (list1.get(m) == list2.get(m)) {
                     list3.add(list1.get(m));
-                } else if(list1.get(m) == list2.get(m + 1)) {
-                    list3.add(list2.get(m+1));
+                } else if (list1.get(m) == list2.get(m + 1)) {
+                    list3.add(list2.get(m + 1));
                 } else {
                     break;
                 }
