@@ -9,7 +9,7 @@ public class Plalindrome {
      * @param args
      */
     public static void main(String[] args) {
-//        String string = "lkafmabcdeffedcbaflkopok";
+//        String string = "lkafmabcdeffedcbaflkopokopok";
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入一段字符串:");
@@ -39,17 +39,19 @@ public class Plalindrome {
             List list3 = new ArrayList();
             for (int m = 0; m < list1.size(); m++) {
                 System.out.print(list1.get(m));
-                if (list2.size() < m + 1) {
+                if (list2.size() <= m + 1) {
                     break;
                 }
                 if (list1.get(m) == list2.get(m)) {
                     list3.add(list1.get(m));
+                } else if(list1.get(m) == list2.get(m + 1)) {
+                    list3.add(list2.get(m+1));
                 } else {
                     break;
                 }
             }
 
-            if (list3.size() >= 3) {
+            if (list3.size() >= 2) {
                 System.out.print(list3);
                 System.out.println("是回文字符串");
             }
